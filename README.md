@@ -1,6 +1,18 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project displays a deck of cards in rows. It gives the user the ability to interact with some actions. You can shuffle the deck which changes the order of the cards, sort the deck which returns them into the correct order of suit and value or you can draw a card. Drawing a card removes the card at the end of the list and moves it to the drawn card section. Once a card has been drawn, you then have the option to reset and move everything back to the deck.
+
+Created utilising Create React App.
+
+## Considerations
+
+Firstly the usage of state management. This app is pretty simple so I stuck to using useState hooks for managing the decks order and length. Potentially, if this became more complicated and prop drilling became more of an issue, Redux could be used to access the state further down in child components more easily.
+
+I used Material UI for components as I didn't want to waste too much time on developing my own, they came out of the box and by default are visually appealing enough in their basic form that I didn't need to address them too much.
+
+React Testing Library was used in the unit tests to evaluate the components. With more time we could use something like Cypress to incorporate end to end tests too.
+
+Accessibility wise, each interactive element has an aria label and is tabbable. It also passes Google Lighthouses tests.
 
 ## Available Scripts
 
@@ -28,19 +40,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
